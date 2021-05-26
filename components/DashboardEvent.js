@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { FaPencilAlt, FaTimes } from 'react-icons/fa'
 import styles from '@/styles/DashboardEvent.module.css'
 
