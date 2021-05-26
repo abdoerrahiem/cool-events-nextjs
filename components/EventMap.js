@@ -25,7 +25,6 @@ export default function EventMap({ event }) {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.features)
           const latitude = data.features[0].center[1]
           const longitude = data.features[0].center[0]
 
