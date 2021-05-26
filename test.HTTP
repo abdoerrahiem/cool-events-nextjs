@@ -1,2 +1,6 @@
 ###
 GET http://api.positionstack.com/v1/forward?access_key=bd49a60e2b3707becdd0eca63a1d1017&query=Mempawah,%20Kalimantan%20Barat
+
+
+###
+GET https://api.mapbox.com/geocoding/v5/mapbox.places/Mempawah,%20Kalimantan%20Barat.json?access_token=pk.eyJ1IjoiYWJkb2VycmFoaWVtIiwiYSI6ImNrNWgxeHBqdjBlNGQzbW53cmc0emhoOHUifQ.kacSGFUFh6X9UXmzGlGqVQ

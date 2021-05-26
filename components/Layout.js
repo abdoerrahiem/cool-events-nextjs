@@ -14,9 +14,9 @@ export default function Layout({ title, keywords, description, children }) {
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
-        <meta
-          http-equiv='Content-Security-Policy'
-          content='upgrade-insecure-requests'
+        <link
+          href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css'
+          rel='stylesheet'
         />
       </Head>
       <Header />

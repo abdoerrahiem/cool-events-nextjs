@@ -18,18 +18,23 @@ export default function EventMap({ event }) {
   useEffect(() => {
     if (event) {
       fetch(
-        `http://api.positionstack.com/v1/forward?access_key=${
-          process.env.NEXT_PUBLIC_POSITION_STACK_API
-        }&query=${event.address.replaceAll(' ', '%20')}`
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${event.address.replaceAll(
+          ' ',
+          '%20'
+        )}.json?access_token=${process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}`
       )
         .then((res) => res.json())
         .then((data) => {
-          setLat(data.data[0].latitude)
-          setLng(data.data[0].longitude)
+          console.log(data.features)
+          const latitude = data.features[0].center[1]
+          const longitude = data.features[0].center[0]
+
+          setLat(latitude)
+          setLng(longitude)
           setViewport({
             ...viewport,
-            latitude: data.data[0].latitude,
-            longitude: data.data[0].longitude,
+            latitude,
+            longitude,
           })
           setLoading(false)
         })
